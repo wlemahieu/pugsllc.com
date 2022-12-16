@@ -1,5 +1,5 @@
 /**
- * Privacy polcy page view
+ * Privacy policy page view
  */
 import { Component } from 'solid-js';
 import styles from '@views/Privacy.module.css';
@@ -865,7 +865,7 @@ const Privacy: Component = () => {
       <ul>
         <li>
           <Typography variant="body1">
-            By email: <a href="mailto:legal@pugsllc.com">legal@pugsllc.com</a>
+            By email: <Link href="mailto:legal@pugsllc.com">legal@pugsllc.com</Link>
           </Typography>
         </li>
         <li>
@@ -1044,7 +1044,7 @@ const Privacy: Component = () => {
       <ul>
         <li>
           <Typography variant="body1">
-            By email: <a href="mailto:legal@pugsllc.com">legal@pugsllc.com</a>
+            By email: <Link href="mailto:legal@pugsllc.com">legal@pugsllc.com</Link>
           </Typography>
         </li>
         <li>
