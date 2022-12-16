@@ -7,8 +7,8 @@ const Header: Component = () => {
   return (
     <header class={styles.root}>
       <img class={styles.logo} src={logo} />
-      <Typography variant="h3" gutterBottom>
-        pugsllc.com
+      <Typography variant="h1" gutterBottom>
+        Pugs, LLC
       </Typography>
     </header>
   );

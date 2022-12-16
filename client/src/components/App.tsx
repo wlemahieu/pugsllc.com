@@ -10,8 +10,9 @@ import Navigation from '@components/Navigation';
 import Routes from '@src/Routes';
 import CssBaseline from '@suid/material/CssBaseline';
 import Container from '@suid/material/Container';
+import { createTheme, ThemeProvider } from '@suid/material/styles';
 
-const functionURL = 'https://coinsponge-com-5awxk26zha-uw.a.run.app';
+const functionURL = 'https://pugsllc-com-b3us3jciya-uw.a.run.app';
 
 const v1GetMyUser = async (): Promise<string> => {
   const url = import.meta.env.PROD ? functionURL : 'http://localhost:3333';
@@ -36,6 +37,36 @@ const defaultValues: DefaultValuesI = {
 export type AppContextT = DefaultValuesI;
 export const AppContext = createContext<AppContextT>();
 
+const theme = createTheme({
+  typography: {
+    fontFamily: 'Merriweather',
+    h1: {
+      fontSize: '65px',
+      fontWeight: 500,
+    },
+    h2: {
+      fontSize: '55px',
+      fontWeight: 500,
+      marginBottom: '1rem',
+    },
+    h3: {
+      fontSize: '45px',
+    },
+    h4: {
+      fontSize: '35px',
+    },
+    h5: {
+      fontSize: '25px',
+    },
+    h6: {
+      fontSize: '15px',
+    },
+    body1: {
+      marginBottom: '1rem',
+    },
+  },
+});
+
 const App: Component = () => {
   const [state, setState]: StoreT = createStore(defaultValues);
 
@@ -45,7 +76,7 @@ const App: Component = () => {
   });
 
   return (
-    <>
+    <ThemeProvider theme={theme}>
       <CssBaseline />
       <AppContext.Provider value={state}>
         <Show when={true}>
@@ -59,7 +90,7 @@ const App: Component = () => {
           </Router>
         </Show>
       </AppContext.Provider>
-    </>
+    </ThemeProvider>
   );
 };
 
