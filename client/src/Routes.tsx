@@ -7,6 +7,7 @@ import Home from '@views/Home';
 import About from '@views/About';
 import Terms from '@src/views/Terms';
 import Privacy from '@src/views/Privacy';
+import Cookies from '@src/views/Cookies';
 import Contact from '@views/Contact';
 
 const Routes: Component = () => {
@@ -16,6 +17,7 @@ const Routes: Component = () => {
       <Route path="/about" component={About} />
       <Route path="/terms" component={Terms} />
       <Route path="/privacy" component={Privacy} />
+      <Route path="/cookies" component={Cookies} />
       <Route path="/contact" component={Contact} />
     </Router>
   );

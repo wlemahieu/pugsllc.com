@@ -9,17 +9,17 @@ import Link from '@suid/material/Link';
 const Footer: Component = () => {
   const navigate = useNavigate();
 
-  const goToTerms = () => navigate('/terms');
-  const goToPrivacy = () => navigate('/privacy');
-
   return (
     <footer class={styles.root}>
       <ul class={styles.list}>
         <li>
-          <Link onClick={goToTerms}>Terms of Use</Link>
+          <Link onClick={() => navigate('/terms')}>Terms of Use</Link>
         </li>
         <li>
-          <Link onClick={goToPrivacy}>Privacy Policy</Link>
+          <Link onClick={() => navigate('/privacy')}>Privacy Policy</Link>
+        </li>
+        <li>
+          <Link onClick={() => navigate('/cookies')}>Cookies Policy</Link>
         </li>
       </ul>
       <div class={styles.brandWrapper}>

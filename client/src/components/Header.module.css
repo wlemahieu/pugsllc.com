@@ -1,9 +1,8 @@
 .root {
   text-align: center;
-  padding: 1rem;
 }
 
 .logo {
-  height: 10vmin !important;
+  width: 15vmax !important;
   pointer-events: none;
 }

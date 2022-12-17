@@ -6,11 +6,11 @@ import { createStore, SetStoreFunction, Store } from 'solid-js/store';
 import { Router } from '@solidjs/router';
 import Header from '@components/Header';
 import Footer from '@components/Footer';
-import Navigation from '@components/Navigation';
 import Routes from '@src/Routes';
 import CssBaseline from '@suid/material/CssBaseline';
 import Container from '@suid/material/Container';
 import { createTheme, ThemeProvider } from '@suid/material/styles';
+import CookiesPopup from './CookiesPopup';
 
 const functionURL = 'https://pugsllc-com-b3us3jciya-uw.a.run.app';
 
@@ -61,7 +61,7 @@ const theme = createTheme({
     h6: {
       fontSize: '15px',
     },
-    body1: {
+    body2: {
       marginBottom: '1rem',
     },
   },
@@ -81,11 +81,14 @@ const App: Component = () => {
       <AppContext.Provider value={state}>
         <Show when={true}>
           <Router>
-            <Container maxWidth="md">
+            <Container
+              maxWidth="md"
+              sx={{ height: '100%', display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}
+            >
               <Header />
-              <Navigation />
               <Routes />
               <Footer />
+              <CookiesPopup />
             </Container>
           </Router>
         </Show>
