@@ -5,7 +5,7 @@ import { Component, Show } from 'solid-js';
 import { Router } from '@solidjs/router';
 import Header from '@components/Header';
 import Footer from '@components/Footer';
-import Routes from '@src/Routes';
+import Routes from '@src/components/Routes';
 import CssBaseline from '@suid/material/CssBaseline';
 import Container from '@suid/material/Container';
 import { createTheme, ThemeProvider } from '@suid/material/styles';
@@ -49,11 +49,13 @@ const App: Component = () => {
       <Show when={true}>
         <Router>
           <Container maxWidth="md" class={styles.root}>
-            <Header />
-            <Routes />
+            <div>
+              <Header />
+              <Routes />
+            </div>
             <Footer />
-            <CookiesPopup />
           </Container>
+          <CookiesPopup />
         </Router>
       </Show>
     </ThemeProvider>

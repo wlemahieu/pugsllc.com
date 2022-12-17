@@ -13,6 +13,9 @@ const Navigation: Component = () => {
     <nav class={styles.root}>
       <ul class={styles.list}>
         <li>
+          <Link onClick={() => navigate('/')}>Home</Link>
+        </li>
+        <li>
           <Link onClick={() => navigate('/about')}>About</Link>
         </li>
         <li>

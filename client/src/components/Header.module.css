@@ -6,3 +6,7 @@
   width: 33vmin !important;
   pointer-events: none;
 }
+
+.link {
+  text-decoration: none !important;
+}
