@@ -11,6 +11,7 @@
   background-color: white;
   border-top: 1px solid grey !important;
   font-size: 12px !important;
+  align-self: flex-end
 }
 
 .narrow {
