@@ -3,7 +3,7 @@
 
  */
 
-import { Component, createEffect, createSignal, Show } from 'solid-js';
+import { Component, createSignal, Show } from 'solid-js';
 import Button from '@suid/material/Button';
 import Link from '@suid/material/Link';
 import { useNavigate } from '@solidjs/router';
@@ -14,10 +14,6 @@ const CookiesPopup: Component = () => {
   const navigate = useNavigate();
   const minWidth1000 = useMediaQuery('(min-width:1000px)');
   const [accepted, setAccepted] = createSignal(false);
-
-  createEffect(() => {
-    console.log(minWidth1000());
-  });
 
   const onAccept = () => {
     setAccepted(true);
