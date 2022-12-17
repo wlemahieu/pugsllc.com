@@ -41,25 +41,25 @@ const theme = createTheme({
   typography: {
     fontFamily: 'Merriweather',
     h1: {
-      fontSize: '65px',
+      fontSize: '66px',
       fontWeight: 500,
     },
     h2: {
-      fontSize: '55px',
+      fontSize: '56px',
       fontWeight: 500,
       marginBottom: '1rem',
     },
     h3: {
-      fontSize: '45px',
+      fontSize: '46px',
     },
     h4: {
-      fontSize: '35px',
+      fontSize: '36px',
     },
     h5: {
-      fontSize: '25px',
+      fontSize: '26px',
     },
     h6: {
-      fontSize: '15px',
+      fontSize: '16px',
     },
     body2: {
       marginBottom: '1rem',
