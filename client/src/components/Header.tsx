@@ -1,7 +1,7 @@
 import { Component } from 'solid-js';
 import styles from '@components/Header.module.css';
 import Typography from '@suid/material/Typography';
-import logo from '@assets/logo.jpg';
+import logo from '@assets/logo.png';
 import Navigation from '@components/Navigation';
 
 const Header: Component = () => {
