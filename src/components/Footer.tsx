@@ -1,6 +1,6 @@
 import styles from '@components/Footer.module.css';
 import cloudflare from '@assets/cloudflare.svg';
-import gcp from '@assets/gcp.svg';
+import firebase from '@assets/firebase.svg';
 import { Component } from 'solid-js';
 import { useNavigate } from '@solidjs/router';
 import { A } from '@solidjs/router';
@@ -31,8 +31,8 @@ const Footer: Component = () => {
         </div>
         <div class={styles.brand}>
           Powered by&nbsp;
-          <A href="https://cloud.google.com" target="_blank" rel="noreferrer">
-            <img src={gcp} class={styles.gcp} />
+          <A href="https://firebase.google.com/" target="_blank" rel="noreferrer">
+            <img src={firebase} class={styles.firebase} />
           </A>
         </div>
       </div>

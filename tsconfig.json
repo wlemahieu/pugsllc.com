@@ -1,17 +1,23 @@
 {
-  "extends": "@tsconfig/node16/tsconfig.json",
-
   "compilerOptions": {
-    "sourceMap": true,
-    "resolveJsonModule": true,
-    "outDir": "./build",
+    "strict": true,
+    "target": "ESNext",
+    "module": "ESNext",
+    "moduleResolution": "node",
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    "jsx": "preserve",
+    "jsxImportSource": "solid-js",
+    "types": ["vite/client"],
+    "noEmit": true,
+    "isolatedModules": true,
     "baseUrl": ".",
     "paths": {
-      "@config/*": ["config/*"],
-      "@routes/*": ["routes/*"],
-      "@store/*": ["store/*"],
+      "@src/*": ["src/*"],
+      "@assets/*": ["src/assets/*"],
+      "@components/*": ["src/components/*"],
+      "@helpers/*": ["src/helpers/*"],
+      "@views/*": ["src/views/*"]
     }
-  },
-
-  "exclude": ["node_modules", "build", "client"]
+  }
 }

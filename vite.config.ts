@@ -25,15 +25,10 @@ export default defineConfig({
   ],
   server: {
     port: 2222,
-    proxy: {
-      '/v1': {
-        target: 'http://localhost:3333',
-        changeOrigin: true,
-      },
-    },
   },
   build: {
     target: 'esnext',
+    outDir: 'public'
   },
   resolve: {
     alias: {
