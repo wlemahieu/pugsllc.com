@@ -35,7 +35,7 @@ const Contact: FC = () => {
     const { email, name, inquiry } = values;
     if (!email?.length) {
       errors.email = 'No email entered';
-    } else if (!/^[\w-.]+@([\w-]+\.)+[\w-]{2,4}$/i.test(email)) {
+    } else if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(email)) {
       errors.email = 'Invalid email format';
     }
     if (!name?.length) {
