@@ -6,7 +6,8 @@
   "scripts": {
     "start": "vite",
     "dev": "vite",
-    "build": "vite build",
+    "build": "REACT_APP_ENV=production vite build",
+    "build_dev": "REACT_APP_ENV=development vite build",
     "serve": "vite preview"
   },
   "license": "MIT",
@@ -19,6 +20,7 @@
     "@types/react-dom": "^18.0.9",
     "@vitejs/plugin-react": "^3.0.0",
     "firebase": "^9.15.0",
+    "firebase-functions": "^4.1.1",
     "formik": "^2.2.9",
     "luxon": "^3.0.4",
     "react": "^18.2.0",

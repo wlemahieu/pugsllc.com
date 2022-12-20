@@ -7,10 +7,10 @@ import './reset.css';
 import './index.css';
 import App from '@src/components/App';
 import { initializeApp, FirebaseApp } from 'firebase/app';
-import { getAnalytics, logEvent } from 'firebase/analytics';
+import { initializeAppCheck, ReCaptchaV3Provider } from 'firebase/app-check';
 import { createContext } from 'use-context-selector';
 
-const FirebaseContext = createContext<FirebaseApp | null>(null);
+export const FirebaseContext = createContext<FirebaseApp | null>(null);
 
 const firebaseConfig = {
   apiKey: 'AIzaSyAplAukEjhFhl8-j9Mzvk-vZw0eRSg8vO8',
@@ -22,8 +22,12 @@ const firebaseConfig = {
 };
 
 const app = initializeApp(firebaseConfig);
-const analytics = getAnalytics(app);
-logEvent(analytics, 'app started');
+const appCheck = initializeAppCheck(app, {
+  provider: new ReCaptchaV3Provider('6LcuhZQjAAAAAGKQjCN-W78vl9yvfC4wQuit1rVB'),
+  isTokenAutoRefreshEnabled: true,
+});
+
+console.log('appCheck', appCheck);
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
   <React.StrictMode>

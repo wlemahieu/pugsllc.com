@@ -3,13 +3,20 @@
  */
 import { FC } from 'react';
 import { useFormik } from 'formik';
+import { useContext } from 'use-context-selector';
 import styles from '@views/Contact.module.css';
 import Button from '@mui/material/Button';
 import TextField from '@mui/material/TextField';
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
+import { FirebaseApp } from 'firebase/app';
+import { getFunctions, httpsCallable } from 'firebase/functions';
+import { FirebaseContext } from '@src/main';
 
 const Contact: FC = () => {
+  const app = useContext(FirebaseContext);
+  const region = 'us-west1';
+  const functions = getFunctions(app as FirebaseApp, region);
   const sendEmail = (values: any) => {
     const { email, inquiry, name, phone, company } = values;
     const text = `
@@ -19,19 +26,8 @@ const Contact: FC = () => {
       COMPANY: ${company}<br/>
       INQUIRY: ${inquiry}
     `;
-    const production = 'https://us-west1-pugsllc.cloudfunctions.net/sendEmail';
-    const development = 'http://127.0.0.1:5001/pugsllc/us-west1/sendEmail';
-    const url = process.env.NODE_ENV === 'production' ? production : development;
-    fetch(url, {
-      method: 'POST',
-      mode: 'no-cors',
-      body: JSON.stringify({
-        text,
-      }),
-      headers: {
-        'Content-type': 'text/html; charset=UTF-8',
-      },
-    });
+    const sendEmail = httpsCallable(functions, 'sendEmail');
+    sendEmail({ text });
   };
 
   const validate = (values: any) => {
