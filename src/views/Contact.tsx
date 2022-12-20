@@ -19,7 +19,7 @@ const Contact: FC = () => {
       COMPANY: ${company}<br/>
       INQUIRY: ${inquiry}
     `;
-    const production = 'https://us-central1-pugsllc.cloudfunctions.net/sendEmail';
+    const production = 'https://us-west1-pugsllc.cloudfunctions.net/sendEmail';
     const development = 'http://127.0.0.1:5001/pugsllc/us-west1/sendEmail';
     const url = process.env.NODE_ENV === 'production' ? production : development;
     fetch(url, {
