@@ -48,7 +48,7 @@ const theme = createTheme({
 
 const App: FC = () => {
   // connect to the local firebase functions emulator
-  if (process.env.REACT_APP_ENV !== 'production') {
+  if (!import.meta.env.PROD) {
     const region = 'us-west1';
     const functions = getFunctions(getApp(), region);
     connectFunctionsEmulator(functions, '127.0.0.1', 5001);
