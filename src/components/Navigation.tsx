@@ -15,14 +15,14 @@ const Navigation: FC = () => {
     setValue(newValue);
     const target = event.target as HTMLElement;
     const path = target.innerText.toLowerCase();
-    const url = path === 'home' ? '/' : `/${path}`;
+    const url = path === 'start' ? '/' : `/${path}`;
     navigate(url);
   };
 
   return (
     <nav className={styles.root}>
       <Tabs value={value} onChange={handleChange} centered>
-        <Tab label="Home" />
+        <Tab label="Start" />
         <Tab label="About" />
         <Tab label="Contact" />
       </Tabs>
