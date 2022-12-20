@@ -1,17 +1,17 @@
 /**
  * Privacy policy page view
  */
-import { Component } from 'solid-js';
+import { FC } from 'react';
+import { useNavigate } from 'react-router-dom';
 import styles from '@views/Privacy.module.css';
-import Typography from '@suid/material/Typography';
-import Link from '@suid/material/Link';
-import { useNavigate } from '@solidjs/router';
+import Typography from '@mui/material/Typography';
+import Link from '@mui/material/Link';
 
-const Privacy: Component = () => {
+const Privacy: FC = () => {
   const navigate = useNavigate();
 
   return (
-    <div class={styles.root}>
+    <div className={styles.root}>
       <Typography variant="h2">Privacy Policy</Typography>
       <Typography variant="h6">Last updated: December 16, 2022</Typography>
       <Typography variant="body2">

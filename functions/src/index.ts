@@ -1,5 +1,4 @@
 import * as functions from "firebase-functions";
-
 import doSendEmail from './sendEmail';
 
 interface ErrorI {
@@ -8,9 +7,12 @@ interface ErrorI {
   detail: string;
 }
 
-export const sendEmail = functions.runWith({ secrets: ["SENDGRID_API_KEY"] }).https.onRequest(async(req, res) => {
+export const sendEmail = functions
+.region('us-west1')
+.runWith({ secrets: ["SENDGRID_API_KEY"] })
+.https.onRequest(async(req, res) => {
   try {
-    await doSendEmail(req.body);
+    await doSendEmail(JSON.parse(req.body).text);
     res.status(200).send(true);
   } catch (e: unknown) {
     const err = e as ErrorI;
@@ -21,7 +23,7 @@ export const sendEmail = functions.runWith({ secrets: ["SENDGRID_API_KEY"] }).ht
       message,
       error: detail,
     };
-    console.log('### ERROR SENDING EMAIL ###: ', payload);
+    console.log('--- ERROR SENDING EMAIL --- ', payload);
     res.status(status).send(payload);
   }
 });

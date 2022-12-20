@@ -1,14 +1,14 @@
 /**
  * About page view
  */
-import { Component } from 'solid-js';
+import { FC } from 'react';
 import styles from '@views/About.module.css';
-import Typography from '@suid/material/Typography';
-import Container from '@suid/material/Container';
+import Typography from '@mui/material/Typography';
+import Container from '@mui/material/Container';
 
-const About: Component = () => {
+const About: FC = () => {
   return (
-    <Container maxWidth="xs" class={styles.root}>
+    <Container maxWidth="xs" className={styles.root}>
       <Typography variant="h4" gutterBottom>
         About Us
       </Typography>

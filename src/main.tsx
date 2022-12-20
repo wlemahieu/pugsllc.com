@@ -1,13 +1,16 @@
 /**
  * App entry point, load css & render App component on root
  */
+import React from 'react';
+import ReactDOM from 'react-dom/client';
 import './reset.css';
 import './index.css';
-import { render } from 'solid-js/web';
 import App from '@src/components/App';
-import { FirebaseProvider } from 'solid-firebase';
-import { initializeApp as initFirebase } from 'firebase/app';
+import { initializeApp, FirebaseApp } from 'firebase/app';
 import { getAnalytics, logEvent } from 'firebase/analytics';
+import { createContext } from 'use-context-selector';
+
+const FirebaseContext = createContext<FirebaseApp | null>(null);
 
 const firebaseConfig = {
   apiKey: 'AIzaSyAplAukEjhFhl8-j9Mzvk-vZw0eRSg8vO8',
@@ -18,15 +21,14 @@ const firebaseConfig = {
   appId: '1:429542448208:web:619875908166957d6f0555',
 };
 
-const app = initFirebase(firebaseConfig);
+const app = initializeApp(firebaseConfig);
 const analytics = getAnalytics(app);
 logEvent(analytics, 'app started');
 
-render(
-  () => (
-    <FirebaseProvider config={firebaseConfig}>
+ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
+  <React.StrictMode>
+    <FirebaseContext.Provider value={app}>
       <App />
-    </FirebaseProvider>
-  ),
-  document.getElementById('root') as HTMLElement,
+    </FirebaseContext.Provider>
+  </React.StrictMode>,
 );

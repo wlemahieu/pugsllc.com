@@ -1,17 +1,17 @@
 /**
  * Terms and conditions page view
  */
-import { Component } from 'solid-js';
+import { FC } from 'react';
+import { useNavigate } from 'react-router-dom';
 import styles from '@views/Terms.module.css';
-import Typography from '@suid/material/Typography';
-import Link from '@suid/material/Link';
-import { useNavigate } from '@solidjs/router';
+import Typography from '@mui/material/Typography';
+import Link from '@mui/material/Link';
 
-const Terms: Component = () => {
+const Terms: FC = () => {
   const navigate = useNavigate();
 
   return (
-    <div class={styles.root}>
+    <div className={styles.root}>
       <Typography variant="h2">Terms and Conditions</Typography>
       <Typography variant="body2">Last updated: December 16, 2022</Typography>
       <Typography variant="body2">

@@ -1,13 +1,11 @@
 import { defineConfig } from 'vite';
 import path from 'path';
-import solidPlugin from 'vite-plugin-solid';
+import react from '@vitejs/plugin-react';
 import eslint from 'vite-plugin-eslint';
-import suidPlugin from '@suid/vite-plugin';
 
 export default defineConfig({
   plugins: [
-    suidPlugin(),
-    solidPlugin(),
+    react(),
     {
       // default settings on build (i.e. fail on error)
       ...eslint(),
@@ -28,7 +26,7 @@ export default defineConfig({
   },
   build: {
     target: 'esnext',
-    outDir: 'public'
+    outDir: 'public',
   },
   resolve: {
     alias: {

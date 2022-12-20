@@ -1,17 +1,16 @@
+import { FC } from 'react';
 import styles from '@components/Footer.module.css';
 import cloudflare from '@assets/cloudflare.svg';
 import firebase from '@assets/firebase.svg';
-import { Component } from 'solid-js';
-import { useNavigate } from '@solidjs/router';
-import { A } from '@solidjs/router';
-import Link from '@suid/material/Link';
+import { useNavigate } from 'react-router-dom';
+import Link from '@mui/material/Link';
 
-const Footer: Component = () => {
+const Footer: FC = () => {
   const navigate = useNavigate();
 
   return (
-    <footer class={styles.root}>
-      <ul class={styles.list}>
+    <footer className={styles.root}>
+      <ul className={styles.list}>
         <li>
           <Link onClick={() => navigate('/terms')}>Terms of Use</Link>
         </li>
@@ -22,21 +21,21 @@ const Footer: Component = () => {
           <Link onClick={() => navigate('/cookies')}>Cookies Policy</Link>
         </li>
       </ul>
-      <div class={styles.brandWrapper}>
-        <div class={styles.brand}>
+      <div className={styles.brandWrapper}>
+        <div className={styles.brand}>
           Protected by&nbsp;
-          <A href="https://cloudflare.com/" target="_blank" rel="noreferrer">
-            <img src={cloudflare} class={styles.cloudflare} />
-          </A>
+          <a href="https://cloudflare.com/" target="_blank" rel="noreferrer">
+            <img src={cloudflare} className={styles.cloudflare} />
+          </a>
         </div>
-        <div class={styles.brand}>
+        <div className={styles.brand}>
           Powered by&nbsp;
-          <A href="https://firebase.google.com/" target="_blank" rel="noreferrer">
-            <img src={firebase} class={styles.firebase} />
-          </A>
+          <a href="https://firebase.google.com/" target="_blank" rel="noreferrer">
+            <img src={firebase} className={styles.firebase} />
+          </a>
         </div>
       </div>
-      <div class={styles.legal}>© 2022 Pugs, LLC. All Rights Reserved.</div>
+      <div className={styles.legal}>© 2022 Pugs, LLC. All Rights Reserved.</div>
     </footer>
   );
 };

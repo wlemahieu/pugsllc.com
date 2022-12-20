@@ -1,8 +1,8 @@
 /**
  * All component routes
  */
-import { Component } from 'solid-js';
-import { Routes as Router, Route } from '@solidjs/router';
+import { FC } from 'react';
+import { Route, Routes as RouteSwitch } from 'react-router-dom';
 import Home from '@views/Home';
 import About from '@views/About';
 import Terms from '@src/views/Terms';
@@ -10,16 +10,16 @@ import Privacy from '@src/views/Privacy';
 import Cookies from '@src/views/Cookies';
 import Contact from '@views/Contact';
 
-const Routes: Component = () => {
+const Routes: FC = () => {
   return (
-    <Router>
-      <Route path="/" component={Home} />
-      <Route path="/about" component={About} />
-      <Route path="/terms" component={Terms} />
-      <Route path="/privacy" component={Privacy} />
-      <Route path="/cookies" component={Cookies} />
-      <Route path="/contact" component={Contact} />
-    </Router>
+    <RouteSwitch>
+      <Route path="/" element={<Home />} />
+      <Route path="/about" element={<About />} />
+      <Route path="/terms" element={<Terms />} />
+      <Route path="/privacy" element={<Privacy />} />
+      <Route path="/cookies" element={<Cookies />} />
+      <Route path="/contact" element={<Contact />} />
+    </RouteSwitch>
   );
 };
 

@@ -1,17 +1,17 @@
 /**
  * Global site menu navigation
  */
+import { FC } from 'react';
+import { useNavigate } from 'react-router-dom';
 import styles from '@components/Navigation.module.css';
-import { Component } from 'solid-js';
-import { useNavigate } from '@solidjs/router';
-import Link from '@suid/material/Link';
+import Link from '@mui/material/Link';
 
-const Navigation: Component = () => {
+const Navigation: FC = () => {
   const navigate = useNavigate();
 
   return (
-    <nav class={styles.root}>
-      <ul class={styles.list}>
+    <nav className={styles.root}>
+      <ul className={styles.list}>
         <li>
           <Link onClick={() => navigate('/')}>Home</Link>
         </li>

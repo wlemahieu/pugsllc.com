@@ -1,16 +1,19 @@
 /**
  * App structure, session fetch, socket listeners
  */
-import { Component, Show } from 'solid-js';
-import { Router } from '@solidjs/router';
+import { FC } from 'react';
+import { BrowserRouter } from 'react-router-dom';
 import Header from '@components/Header';
 import Footer from '@components/Footer';
 import Routes from '@src/components/Routes';
-import CssBaseline from '@suid/material/CssBaseline';
-import Container from '@suid/material/Container';
-import { createTheme, ThemeProvider } from '@suid/material/styles';
+import CssBaseline from '@mui/material/CssBaseline';
+import Container from '@mui/material/Container';
+import { createTheme, ThemeProvider } from '@mui/material/styles';
 import CookiesPopup from './CookiesPopup';
 import styles from './App.module.css';
+import { getApp } from 'firebase/app';
+import { getFunctions, connectFunctionsEmulator } from 'firebase/functions';
+// import { createContext, useContextSelector } from 'use-context-selector';
 
 const theme = createTheme({
   typography: {
@@ -42,23 +45,25 @@ const theme = createTheme({
   },
 });
 
-const App: Component = () => {
+const App: FC = () => {
+  // connect to the local firebase functions emulator
+  if (process.env.NODE_ENV !== 'production') {
+    const functions = getFunctions(getApp());
+    connectFunctionsEmulator(functions, 'http://127.0.0.1', 5001);
+  }
+
   return (
-    <ThemeProvider theme={theme}>
-      <CssBaseline />
-      <Show when={true}>
-        <Router>
-          <Container maxWidth="md" class={styles.root}>
-            <div>
-              <Header />
-              <Routes />
-            </div>
-            <Footer />
-          </Container>
-          <CookiesPopup />
-        </Router>
-      </Show>
-    </ThemeProvider>
+    <BrowserRouter>
+      <ThemeProvider theme={theme}>
+        <CssBaseline />
+        <Container maxWidth="md" className={styles.root}>
+          <Header />
+          <Routes />
+          <Footer />
+        </Container>
+        <CookiesPopup />
+      </ThemeProvider>
+    </BrowserRouter>
   );
 };
 

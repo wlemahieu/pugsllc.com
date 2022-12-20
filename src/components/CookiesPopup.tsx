@@ -1,19 +1,18 @@
 /**
  * We use cookies to give you the best online experience. By clicking "Accept Cookies" or clicking into any content on this site, you agree to allow cookies to be placed. To find out more visit ourcookie policy
-
  */
 
-import { Component, createSignal, Show } from 'solid-js';
-import Button from '@suid/material/Button';
-import Link from '@suid/material/Link';
-import { useNavigate } from '@solidjs/router';
+import { FC, useState } from 'react';
+import Button from '@mui/material/Button';
+import Link from '@mui/material/Link';
+import { useNavigate } from 'react-router-dom';
 import styles from '@components/CookiesPopup.module.css';
-import useMediaQuery from '@suid/material/useMediaQuery';
+import useMediaQuery from '@mui/material/useMediaQuery';
 
-const CookiesPopup: Component = () => {
+const CookiesPopup: FC = () => {
   const navigate = useNavigate();
   const minWidth1000 = useMediaQuery('(min-width:1000px)');
-  const [accepted, setAccepted] = createSignal(false);
+  const [accepted, setAccepted] = useState(false);
 
   const onAccept = () => {
     setAccepted(true);
@@ -21,7 +20,7 @@ const CookiesPopup: Component = () => {
 
   const RejectButton = () => (
     <Button
-      class={`${styles.btn} ${minWidth1000() ? styles.wideBtn : ''}`}
+      className={`${styles.btn} ${minWidth1000 ? styles.wideBtn : ''}`}
       color="error"
       variant="contained"
       size="small"
@@ -31,7 +30,7 @@ const CookiesPopup: Component = () => {
   );
 
   const Verbiage = () => (
-    <div class={styles.verbiage}>
+    <div className={styles.verbiage}>
       We use cookies to give you the best online experience. By clicking "Accept Cookies" or clicking into any content
       on this site, you agree to allow cookies to be placed. To find out more visit our{' '}
       <Link onClick={() => navigate('/cookies')}>cookie policy.</Link>
@@ -40,7 +39,7 @@ const CookiesPopup: Component = () => {
 
   const AcceptButton = () => (
     <Button
-      class={`${styles.btn} ${minWidth1000() ? styles.wideBtn : ''}`}
+      className={`${styles.btn} ${minWidth1000 ? styles.wideBtn : ''}`}
       color="success"
       variant="contained"
       onClick={onAccept}
@@ -50,7 +49,7 @@ const CookiesPopup: Component = () => {
   );
 
   const WideView = () => (
-    <div class={styles.root}>
+    <div className={styles.root}>
       <RejectButton />
       <Verbiage />
       <AcceptButton />
@@ -58,16 +57,17 @@ const CookiesPopup: Component = () => {
   );
 
   const NarrowView = () => (
-    <div class={`${styles.root} ${!minWidth1000() ? styles.narrow : ''}`}>
+    <div className={`${styles.root} ${!minWidth1000 ? styles.narrow : ''}`}>
       <Verbiage />
-      <div class={styles.narrowBtns}>
+      <div className={styles.narrowBtns}>
         <RejectButton />
         <AcceptButton />
       </div>
     </div>
   );
 
-  return <Show when={!accepted()}>{minWidth1000() ? <WideView /> : <NarrowView />}</Show>;
+  if (accepted) return null;
+  return <>{minWidth1000 ? <WideView /> : <NarrowView />}</>;
 };
 
 export default CookiesPopup;
