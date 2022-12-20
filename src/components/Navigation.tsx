@@ -1,27 +1,31 @@
 /**
  * Global site menu navigation
  */
-import { FC } from 'react';
+import { FC, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import styles from '@components/Navigation.module.css';
-import Link from '@mui/material/Link';
+import Tabs from '@mui/material/Tabs';
+import Tab from '@mui/material/Tab';
 
 const Navigation: FC = () => {
   const navigate = useNavigate();
+  const [value, setValue] = useState(0);
+
+  const handleChange = (event: React.SyntheticEvent, newValue: number) => {
+    setValue(newValue);
+    const target = event.target as HTMLElement;
+    const path = target.innerText.toLowerCase();
+    const url = path === 'home' ? '/' : `/${path}`;
+    navigate(url);
+  };
 
   return (
     <nav className={styles.root}>
-      <ul className={styles.list}>
-        <li>
-          <Link onClick={() => navigate('/')}>Home</Link>
-        </li>
-        <li>
-          <Link onClick={() => navigate('/about')}>About</Link>
-        </li>
-        <li>
-          <Link onClick={() => navigate('/contact')}>Contact</Link>
-        </li>
-      </ul>
+      <Tabs value={value} onChange={handleChange} centered>
+        <Tab label="Home" />
+        <Tab label="About" />
+        <Tab label="Contact" />
+      </Tabs>
     </nav>
   );
 };

@@ -1,0 +1,117 @@
+[debug] [2022-12-20T15:31:20.524Z] ----------------------------------------------------------------------
+[debug] [2022-12-20T15:31:20.524Z] Command:       /Users/wes/.nvm/versions/node/v16.13.1/bin/node /Users/wes/.nvm/versions/node/v17.3.0/bin/firebase emulators:start
+[debug] [2022-12-20T15:31:20.525Z] CLI Version:   11.18.0
+[debug] [2022-12-20T15:31:20.525Z] Platform:      darwin
+[debug] [2022-12-20T15:31:20.525Z] Node Version:  v16.13.1
+[debug] [2022-12-20T15:31:20.526Z] Time:          Tue Dec 20 2022 07:31:20 GMT-0800 (Pacific Standard Time)
+[debug] [2022-12-20T15:31:20.526Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2022-12-20T15:31:20.564Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2022-12-20T15:31:20.564Z] > authorizing via signed-in user (wes@pugsllc.com)
+[info] i  emulators: Starting emulators: functions, hosting {"metadata":{"emulator":{"name":"hub"},"message":"Starting emulators: functions, hosting"}}
+[debug] [2022-12-20T15:31:21.494Z] [logging] Logging Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2022-12-20T15:31:21.495Z] [hosting] Hosting Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2022-12-20T15:31:21.495Z] assigned listening specs for emulators {"user":{"hub":[{"address":"127.0.0.1","family":"IPv4","port":4400},{"address":"::1","family":"IPv6","port":4400}],"ui":[{"address":"127.0.0.1","family":"IPv4","port":4000},{"address":"::1","family":"IPv6","port":4000}],"logging":[{"address":"127.0.0.1","family":"IPv4","port":4500}],"hosting":[{"address":"127.0.0.1","family":"IPv4","port":8080}]},"metadata":{"message":"assigned listening specs for emulators"}}
+[debug] [2022-12-20T15:31:21.502Z] [hub] writing locator at /var/folders/2n/s8gv8z2s40bbhz9_z1k727jc0000gn/T/hub-pugsllc.json
+[debug] [2022-12-20T15:31:21.957Z] [functions] Functions Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2022-12-20T15:31:21.957Z] [eventarc] Eventarc Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2022-12-20T15:31:21.957Z] late-assigned ports for functions and eventarc emulators {"user":{"hub":[{"address":"127.0.0.1","family":"IPv4","port":4400},{"address":"::1","family":"IPv6","port":4400}],"ui":[{"address":"127.0.0.1","family":"IPv4","port":4000},{"address":"::1","family":"IPv6","port":4000}],"logging":[{"address":"127.0.0.1","family":"IPv4","port":4500}],"hosting":[{"address":"127.0.0.1","family":"IPv4","port":8080}],"functions":[{"address":"127.0.0.1","family":"IPv4","port":5001}],"eventarc":[{"address":"127.0.0.1","family":"IPv4","port":9299}]},"metadata":{"message":"late-assigned ports for functions and eventarc emulators"}}
+[warn] ⚠  functions: The following emulators are not running, calls to these services from the Functions emulator will affect production: auth, firestore, database, pubsub, storage {"metadata":{"emulator":{"name":"functions"},"message":"The following emulators are not running, calls to these services from the Functions emulator will affect production: \u001b[1mauth, firestore, database, pubsub, storage\u001b[22m"}}
+[info] ✔  functions: Using node@16 from host. {"metadata":{"emulator":{"name":"functions"},"message":"Using node@16 from host."}}
+[debug] [2022-12-20T15:31:21.966Z] defaultcredentials: writing to file /Users/wes/.config/firebase/wes_pugsllc_com_application_default_credentials.json
+[debug] [2022-12-20T15:31:21.969Z] Setting GAC to /Users/wes/.config/firebase/wes_pugsllc_com_application_default_credentials.json {"metadata":{"emulator":{"name":"functions"},"message":"Setting GAC to /Users/wes/.config/firebase/wes_pugsllc_com_application_default_credentials.json"}}
+[debug] [2022-12-20T15:31:21.970Z] > refreshing access token with scopes: []
+[debug] [2022-12-20T15:31:21.971Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2022-12-20T15:31:21.971Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2022-12-20T15:31:22.119Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
+[debug] [2022-12-20T15:31:22.119Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2022-12-20T15:31:22.132Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/pugsllc/adminSdkConfig [none]
+[debug] [2022-12-20T15:31:22.512Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/pugsllc/adminSdkConfig 200
+[debug] [2022-12-20T15:31:22.513Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/pugsllc/adminSdkConfig {"projectId":"pugsllc","storageBucket":"pugsllc.appspot.com"}
+[debug] [2022-12-20T15:31:22.536Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/pugsllc/sites 
+[debug] [2022-12-20T15:31:23.073Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/pugsllc/sites 200
+[debug] [2022-12-20T15:31:23.073Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/pugsllc/sites {"sites":[{"name":"projects/pugsllc/sites/pugsllc","defaultUrl":"https://pugsllc.web.app","appId":"1:429542448208:web:619875908166957d6f0555","type":"DEFAULT_SITE"}]}
+[debug] [2022-12-20T15:31:23.074Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/pugsllc/webApps/1:429542448208:web:619875908166957d6f0555/config [none]
+[debug] [2022-12-20T15:31:23.642Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/pugsllc/webApps/1:429542448208:web:619875908166957d6f0555/config 200
+[debug] [2022-12-20T15:31:23.642Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/pugsllc/webApps/1:429542448208:web:619875908166957d6f0555/config {"projectId":"pugsllc","appId":"1:429542448208:web:619875908166957d6f0555","storageBucket":"pugsllc.appspot.com","apiKey":"AIzaSyAplAukEjhFhl8-j9Mzvk-vZw0eRSg8vO8","authDomain":"pugsllc.firebaseapp.com","messagingSenderId":"429542448208"}
+[debug] [2022-12-20T15:31:23.654Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/pugsllc [none]
+[debug] [2022-12-20T15:31:24.051Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/pugsllc 200
+[debug] [2022-12-20T15:31:24.052Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/pugsllc {"projectId":"pugsllc","projectNumber":"429542448208","displayName":"pugsllc","name":"projects/pugsllc","resources":{"hostingSite":"pugsllc"},"state":"ACTIVE","etag":"1_5944e71b-0fd4-49e6-a8a2-4b849e166bb1"}
+[info] i  hosting[pugsllc]: Serving hosting files from: public {"metadata":{"emulator":{"name":"hosting"},"message":"Serving hosting files from: \u001b[1mpublic\u001b[22m"}}
+[info] ✔  hosting[pugsllc]: Local server: http://127.0.0.1:8080 {"metadata":{"emulator":{"name":"hosting"},"message":"Local server: \u001b[4m\u001b[1mhttp://127.0.0.1:8080\u001b[22m\u001b[24m"}}
+[debug] [2022-12-20T15:31:24.201Z] Ignoring unsupported arg: auto_download {"metadata":{"emulator":{"name":"ui"},"message":"Ignoring unsupported arg: auto_download"}}
+[debug] [2022-12-20T15:31:24.202Z] Ignoring unsupported arg: port {"metadata":{"emulator":{"name":"ui"},"message":"Ignoring unsupported arg: port"}}
+[debug] [2022-12-20T15:31:24.202Z] Starting Emulator UI with command {"binary":"node","args":["/Users/wes/.cache/firebase/emulators/ui-v1.11.1/server/server.js"],"optionalArgs":[],"joinArgs":false} {"metadata":{"emulator":{"name":"ui"},"message":"Starting Emulator UI with command {\"binary\":\"node\",\"args\":[\"/Users/wes/.cache/firebase/emulators/ui-v1.11.1/server/server.js\"],\"optionalArgs\":[],\"joinArgs\":false}"}}
+[info] i  ui: Emulator UI logging to ui-debug.log {"metadata":{"emulator":{"name":"ui"},"message":"Emulator UI logging to \u001b[1mui-debug.log\u001b[22m"}}
+[debug] [2022-12-20T15:31:24.270Z] Web / API server started at 127.0.0.1:4000
+Web / API server started at ::1:4000
+ {"metadata":{"emulator":{"name":"ui"},"message":"Web / API server started at 127.0.0.1:4000\nWeb / API server started at ::1:4000\n"}}
+[info] i  functions: Watching "/Users/wes/Development/pugsllc/pugsllc.com/functions" for Cloud Functions... {"metadata":{"emulator":{"name":"functions"},"message":"Watching \"/Users/wes/Development/pugsllc/pugsllc.com/functions\" for Cloud Functions..."}}
+[debug] [2022-12-20T15:31:24.466Z] Validating nodejs source
+[debug] [2022-12-20T15:31:25.271Z] > [functions] package.json contents: {
+  "name": "functions",
+  "scripts": {
+    "lint": "eslint --ext .js,.ts .",
+    "build": "tsc",
+    "build:watch": "tsc --watch",
+    "serve": "npm run build && firebase emulators:start --only functions",
+    "shell": "npm run build && firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "16"
+  },
+  "main": "lib/index.js",
+  "dependencies": {
+    "@sendgrid/mail": "^7.7.0",
+    "firebase-admin": "^10.0.2",
+    "firebase-functions": "^4.1.1"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.12.0",
+    "@typescript-eslint/parser": "^5.12.0",
+    "eslint": "^8.9.0",
+    "eslint-config-google": "^0.14.0",
+    "eslint-plugin-import": "^2.25.4",
+    "firebase-functions-test": "^0.2.0",
+    "typescript": "^4.5.4"
+  },
+  "private": true
+}
+[debug] [2022-12-20T15:31:25.272Z] Building nodejs source
+[debug] [2022-12-20T15:31:25.272Z] Analyzing nodejs backend spec
+[debug] [2022-12-20T15:31:25.273Z] Could not find functions.yaml. Must use http discovery
+[debug] [2022-12-20T15:31:25.429Z] Serving at port 9007
+
+[debug] [2022-12-20T15:31:25.582Z] Got response from /__/functions.yaml {"endpoints":{"sendEmail":{"platform":"gcfv1","availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"serviceAccountEmail":null,"vpc":null,"region":["us-west1"],"secretEnvironmentVariables":[{"key":"SENDGRID_API_KEY"}],"httpsTrigger":{},"entryPoint":"sendEmail"}},"specVersion":"v1alpha1","requiredAPIs":[]}
+[debug] [2022-12-20T15:31:25.586Z] shutdown requested via /__/quitquitquit
+
+[info] ✔  functions: Loaded functions definitions from source: sendEmail. {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: sendEmail."}}
+[info] ✔  functions[us-west1-sendEmail]: http function initialized (http://127.0.0.1:5001/pugsllc/us-west1/sendEmail). {"metadata":{"emulator":{"name":"functions"},"message":"\u001b[1mhttp\u001b[22m function initialized (http://127.0.0.1:5001/pugsllc/us-west1/sendEmail)."}}
+[info] 
+┌─────────────────────────────────────────────────────────────┐
+│ ✔  All emulators ready! It is now safe to connect your app. │
+│ i  View Emulator UI at http://127.0.0.1:4000/               │
+└─────────────────────────────────────────────────────────────┘
+
+┌───────────┬────────────────┬─────────────────────────────────┐
+│ Emulator  │ Host:Port      │ View in Emulator UI             │
+├───────────┼────────────────┼─────────────────────────────────┤
+│ Functions │ 127.0.0.1:5001 │ http://127.0.0.1:4000/functions │
+├───────────┼────────────────┼─────────────────────────────────┤
+│ Hosting   │ 127.0.0.1:8080 │ n/a                             │
+└───────────┴────────────────┴─────────────────────────────────┘
+  Emulator Hub running at 127.0.0.1:4400
+  Other reserved ports: 4500
+
+Issues? Report them at https://github.com/firebase/firebase-tools/issues and attach the *-debug.log files.
+ 
+[info] i  hosting: 127.0.0.1 - - [20/Dec/2022:15:31:34 +0000] "GET / HTTP/1.1" 200 673 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:108.0) Gecko/20100101 Firefox/108.0" {"metadata":{"emulator":{"name":"hosting"},"message":"127.0.0.1 - - [20/Dec/2022:15:31:34 +0000] \"GET / HTTP/1.1\" 200 673 \"-\" \"Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:108.0) Gecko/20100101 Firefox/108.0\""}}
+[info] i  hosting: 127.0.0.1 - - [20/Dec/2022:15:31:34 +0000] "GET /assets/index-9396cb09.css HTTP/1.1" 200 - "http://127.0.0.1:8080/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:108.0) Gecko/20100101 Firefox/108.0" {"metadata":{"emulator":{"name":"hosting"},"message":"127.0.0.1 - - [20/Dec/2022:15:31:34 +0000] \"GET /assets/index-9396cb09.css HTTP/1.1\" 200 - \"http://127.0.0.1:8080/\" \"Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:108.0) Gecko/20100101 Firefox/108.0\""}}
+[info] i  hosting: 127.0.0.1 - - [20/Dec/2022:15:31:34 +0000] "GET /assets/index-4c6c9e86.js HTTP/1.1" 200 - "http://127.0.0.1:8080/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:108.0) Gecko/20100101 Firefox/108.0" {"metadata":{"emulator":{"name":"hosting"},"message":"127.0.0.1 - - [20/Dec/2022:15:31:34 +0000] \"GET /assets/index-4c6c9e86.js HTTP/1.1\" 200 - \"http://127.0.0.1:8080/\" \"Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:108.0) Gecko/20100101 Firefox/108.0\""}}
+[info] i  hosting: 127.0.0.1 - - [20/Dec/2022:15:31:34 +0000] "GET /assets/logo-28a324c3.png HTTP/1.1" 200 183765 "http://127.0.0.1:8080/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:108.0) Gecko/20100101 Firefox/108.0" {"metadata":{"emulator":{"name":"hosting"},"message":"127.0.0.1 - - [20/Dec/2022:15:31:34 +0000] \"GET /assets/logo-28a324c3.png HTTP/1.1\" 200 183765 \"http://127.0.0.1:8080/\" \"Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:108.0) Gecko/20100101 Firefox/108.0\""}}
+[info] i  hosting: 127.0.0.1 - - [20/Dec/2022:15:31:34 +0000] "GET /assets/cloudflare-6c6d8473.svg HTTP/1.1" 200 - "http://127.0.0.1:8080/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:108.0) Gecko/20100101 Firefox/108.0" {"metadata":{"emulator":{"name":"hosting"},"message":"127.0.0.1 - - [20/Dec/2022:15:31:34 +0000] \"GET /assets/cloudflare-6c6d8473.svg HTTP/1.1\" 200 - \"http://127.0.0.1:8080/\" \"Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:108.0) Gecko/20100101 Firefox/108.0\""}}
+[info] i  hosting: 127.0.0.1 - - [20/Dec/2022:15:31:34 +0000] "GET /assets/firebase-35235a19.svg HTTP/1.1" 200 - "http://127.0.0.1:8080/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:108.0) Gecko/20100101 Firefox/108.0" {"metadata":{"emulator":{"name":"hosting"},"message":"127.0.0.1 - - [20/Dec/2022:15:31:34 +0000] \"GET /assets/firebase-35235a19.svg HTTP/1.1\" 200 - \"http://127.0.0.1:8080/\" \"Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:108.0) Gecko/20100101 Firefox/108.0\""}}
+[info] i  hosting: 127.0.0.1 - - [20/Dec/2022:15:31:34 +0000] "GET /assets/favicon-efd656ae.ico HTTP/1.1" 200 - "http://127.0.0.1:8080/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:108.0) Gecko/20100101 Firefox/108.0" {"metadata":{"emulator":{"name":"hosting"},"message":"127.0.0.1 - - [20/Dec/2022:15:31:34 +0000] \"GET /assets/favicon-efd656ae.ico HTTP/1.1\" 200 - \"http://127.0.0.1:8080/\" \"Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:108.0) Gecko/20100101 Firefox/108.0\""}}

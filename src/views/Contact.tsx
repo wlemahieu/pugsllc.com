@@ -69,10 +69,10 @@ const Contact: FC = () => {
   return (
     <Container maxWidth="xs" className={styles.root}>
       <Typography variant="h4" gutterBottom>
-        Contact Us
+        Contact
       </Typography>
       <div className={styles.form}>
-        <Typography variant="h6" gutterBottom>
+        <Typography variant="body2" gutterBottom>
           Serious inquiries only please:
         </Typography>
         <form onSubmit={formik.handleSubmit}>

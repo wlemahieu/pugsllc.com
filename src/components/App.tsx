@@ -37,7 +37,8 @@ const theme = createTheme({
       fontSize: '26px',
     },
     h6: {
-      fontSize: '16px',
+      fontSize: '18px',
+      fontWeight: 600,
     },
     body2: {
       marginBottom: '1rem',

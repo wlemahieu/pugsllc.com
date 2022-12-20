@@ -1,6 +1,7 @@
 import { FC } from 'react';
 import { useNavigate } from 'react-router-dom';
 import styles from '@components/Header.module.css';
+import Avatar from '@mui/material/Avatar';
 import Typography from '@mui/material/Typography';
 import logo from '@assets/logo.png';
 import Navigation from '@components/Navigation';
@@ -10,8 +11,8 @@ const Header: FC = () => {
   const navigate = useNavigate();
   return (
     <header className={styles.root}>
+      <Avatar className={styles.logo} src={logo} onClick={() => navigate('/')} variant="square" />
       <Link onClick={() => navigate('/')} color="inherit" className={styles.link}>
-        <img className={styles.logo} src={logo} />
         <Typography variant="h1" gutterBottom>
           Pugs, LLC
         </Typography>
