@@ -14,7 +14,7 @@ const Navigation: FC = () => {
   const handleChange = (event: React.SyntheticEvent, newValue: number) => {
     setValue(newValue);
     const target = event.target as HTMLElement;
-    const path = target.innerText.toLowerCase();
+    const path = target.id;
     const url = path === 'start' ? '/' : `/${path}`;
     navigate(url);
   };
@@ -22,9 +22,9 @@ const Navigation: FC = () => {
   return (
     <nav className={styles.root}>
       <Tabs value={value} onChange={handleChange} centered>
-        <Tab label="Start" />
-        <Tab label="About" />
-        <Tab label="Contact" />
+        <Tab label="Start" id="start" />
+        <Tab label="About" id="about" />
+        <Tab label="Contact" id="contact" />
       </Tabs>
     </nav>
   );
