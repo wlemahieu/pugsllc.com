@@ -1,30 +1,48 @@
 /**
  * Global site menu navigation
  */
-import { FC, useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { FC, useEffect, useState } from 'react';
+import { useLocation, useNavigate } from 'react-router-dom';
 import styles from '@components/Navigation.module.css';
 import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
 
+const defaultTab = 'start';
+const tabs = ['start', 'about', 'contact'];
+
+const findTabIdx = (tab: string) => tabs.findIndex((t) => t === tab);
+
 const Navigation: FC = () => {
   const navigate = useNavigate();
-  const [value, setValue] = useState(0);
+  const location = useLocation();
+  const [key, setKey] = useState<number | null>(0);
 
-  const handleChange = (event: React.SyntheticEvent, newValue: number) => {
-    setValue(newValue);
+  useEffect(() => {
+    const p = location.pathname.replace('/', '');
+    const newPath = !p ? defaultTab : p;
+    const idx = findTabIdx(newPath);
+    if (idx > -1) {
+      setKey(idx);
+    } else {
+      setKey(null);
+    }
+  }, [location.pathname]);
+
+  const handleChange = (event: React.SyntheticEvent) => {
     const target = event.target as HTMLElement;
-    const path = target.id;
-    const url = path === 'start' ? '/' : `/${path}`;
+    const { id } = target;
+    const url = id === defaultTab ? '/' : `/${id}`;
+    const idx = findTabIdx(id);
+    setKey(idx);
     navigate(url);
   };
 
   return (
     <nav className={styles.root}>
-      <Tabs value={value} onChange={handleChange} centered>
-        <Tab label="Start" id="start" />
-        <Tab label="About" id="about" />
-        <Tab label="Contact" id="contact" />
+      <Tabs value={key} onChange={handleChange} centered>
+        {tabs.map((tab, idx) => (
+          <Tab key={`key-${idx}`} label={tab} id={tab} value={idx} />
+        ))}
       </Tabs>
     </nav>
   );
