@@ -1,10 +1,10 @@
 /**
  * App entry point, load css & render App component on root
  */
-import React from 'react';
-import ReactDOM from 'react-dom/client';
 import './reset.css';
 import './index.css';
+import React from 'react';
+import ReactDOM from 'react-dom/client';
 import App from '@src/components/App';
 import { initializeApp, FirebaseApp } from 'firebase/app';
 import { initializeAppCheck, ReCaptchaV3Provider } from 'firebase/app-check';
