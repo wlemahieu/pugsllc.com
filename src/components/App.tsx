@@ -1,8 +1,10 @@
 /**
  * App structure, session fetch, socket listeners
  */
-import { FC } from 'react';
+import { FC, useEffect, useRef } from 'react';
 import { BrowserRouter } from 'react-router-dom';
+import { useLocation } from 'react-router';
+
 import Header from '@components/Header';
 import Footer from '@components/Footer';
 import Routes from '@src/components/Routes';
@@ -46,6 +48,25 @@ const theme = createTheme({
   },
 });
 
+const Components: FC = () => {
+  const ref = useRef<HTMLDivElement>(null);
+  const location = useLocation();
+
+  useEffect(() => {
+    if (ref.current) {
+      ref.current.scrollIntoView();
+    }
+  }, [location.pathname]);
+
+  return (
+    <Container maxWidth="md" className={styles.root} ref={ref}>
+      <Header />
+      <Routes />
+      <Footer />
+    </Container>
+  );
+};
+
 const App: FC = () => {
   // connect to the local firebase functions emulator
   if (!import.meta.env.PROD) {
@@ -58,11 +79,7 @@ const App: FC = () => {
     <BrowserRouter>
       <ThemeProvider theme={theme}>
         <CssBaseline />
-        <Container maxWidth="md" className={styles.root}>
-          <Header />
-          <Routes />
-          <Footer />
-        </Container>
+        <Components />
         <CookiesPopup />
       </ThemeProvider>
     </BrowserRouter>
