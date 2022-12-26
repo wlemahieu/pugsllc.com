@@ -9,13 +9,11 @@ import Header from '@components/Header';
 import Footer from '@components/Footer';
 import Routes from '@src/components/Routes';
 import CssBaseline from '@mui/material/CssBaseline';
-import Container from '@mui/material/Container';
+import Box from '@mui/material/Box';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import CookiesPopup from './CookiesPopup';
-import styles from './App.module.css';
 import { getApp } from 'firebase/app';
 import { getFunctions, connectFunctionsEmulator } from 'firebase/functions';
-// import { createContext, useContextSelector } from 'use-context-selector';
 
 const theme = createTheme({
   typography: {
@@ -59,11 +57,20 @@ const Components: FC = () => {
   }, [location.pathname]);
 
   return (
-    <Container maxWidth="md" className={styles.root} ref={ref}>
+    <Box
+      sx={{
+        display: 'flex',
+        height: '100%',
+        width: '100%',
+        flexDirection: 'column',
+        justifyContent: 'space-between',
+      }}
+      ref={ref}
+    >
       <Header />
       <Routes />
       <Footer />
-    </Container>
+    </Box>
   );
 };
 

@@ -3,12 +3,13 @@
  */
 import { FC, useEffect, useState } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
-import styles from '@components/Navigation.module.css';
+import Box from '@mui/material/Box';
+import Divider from '@mui/material/Divider';
 import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
 
-const defaultTab = 'start';
-const tabs = ['start', 'about', 'contact'];
+const defaultTab = 'welcome';
+const tabs = ['welcome', 'about', 'portfolio', 'contact'];
 
 const findTabIdx = (tab: string) => tabs.findIndex((t) => t === tab);
 
@@ -38,12 +39,15 @@ const Navigation: FC = () => {
   };
 
   return (
-    <nav className={styles.root}>
-      <Tabs value={key} onChange={handleChange} centered>
-        {tabs.map((tab, idx) => (
-          <Tab key={`key-${idx}`} label={tab} id={tab} value={idx} />
-        ))}
-      </Tabs>
+    <nav>
+      <Box sx={{ textAlign: 'center', m: 3, height: '100%' }}>
+        <Tabs value={key} onChange={handleChange} centered sx={{ height: '100%' }}>
+          {tabs.map((tab, idx) => (
+            <Tab key={`key-${idx}`} label={tab} id={tab} value={idx} />
+          ))}
+        </Tabs>
+      </Box>
+      <Divider />
     </nav>
   );
 };
