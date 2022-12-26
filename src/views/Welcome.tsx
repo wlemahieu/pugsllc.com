@@ -8,7 +8,7 @@ import { Paper } from '@mui/material';
 
 const Welcome: FC = () => {
   return (
-    <Container maxWidth="md" sx={{ height: '100%' }}>
+    <Container maxWidth="md">
       <Paper sx={{ p: 8, textAlign: 'center' }}>
         <Typography variant="h3" gutterBottom>
           Welcome

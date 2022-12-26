@@ -3,7 +3,6 @@
  */
 import { FC } from 'react';
 import Container from '@mui/material/Container';
-import Avatar from '@mui/material/Avatar';
 import Paper from '@mui/material/Paper';
 import Box from '@mui/material/Box';
 import Card from '@mui/material/Card';
@@ -12,7 +11,6 @@ import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
-import { useNavigate } from 'react-router';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import OpenInBrowserIcon from '@mui/icons-material/OpenInBrowser';
 import axsripoff from '@assets/projects/axsripoff-com.png';
@@ -47,10 +45,8 @@ const projects = [
 ];
 
 const Portfolio: FC = () => {
-  const navigate = useNavigate();
-
   return (
-    <Container maxWidth="md" sx={{ height: '100%' }}>
+    <Container maxWidth="md">
       <Paper sx={{ p: 8, textAlign: 'center' }}>
         <Typography variant="h3" gutterBottom>
           Portfolio

@@ -15,7 +15,7 @@ const avatarStyle = { width: '150px', height: '150px', margin: 'auto' };
 
 const About: FC = () => {
   return (
-    <Container maxWidth="sm" sx={{ height: '100%' }}>
+    <Container maxWidth="sm">
       <Paper sx={{ p: 8, textAlign: 'center' }}>
         <Typography variant="h3" gutterBottom>
           About

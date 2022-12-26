@@ -11,7 +11,7 @@ const Cookies: FC = () => {
   const navigate = useNavigate();
 
   return (
-    <Box sx={{ pl: 5, pr: 5 }}>
+    <Box sx={{ p: 5 }}>
       <Typography variant="h3">Cookies Policy</Typography>
       <Typography variant="body2">Last updated: December 16, 2022</Typography>
       <Typography variant="body2">
