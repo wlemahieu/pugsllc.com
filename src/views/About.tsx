@@ -13,10 +13,10 @@ import lucy from '@assets/lucy.jpg';
 const About: FC = () => {
   return (
     <Container maxWidth="xs" className={styles.root}>
-      <Typography variant="h4" gutterBottom>
+      <Typography variant="h3" gutterBottom>
         About
       </Typography>
-      <Typography variant="body2" gutterBottom style={{ marginBottom: '3rem' }}>
+      <Typography variant="body1" gutterBottom style={{ marginBottom: '3rem' }}>
         Our small team is very energetic, efficient &amp; powerful!
       </Typography>
       <div className={styles.memberBlock}>
@@ -24,7 +24,13 @@ const About: FC = () => {
           Managing Member:
         </Typography>
         <div>
-          <Avatar src={wes} variant="circular" className={styles.member} alt="A white guy in Thailand." />
+          <Avatar
+            src={wes}
+            sx={{ width: '150px', height: '150px' }}
+            variant="circular"
+            className={styles.member}
+            alt="A white guy in Thailand."
+          />
           <span>Wesley LeMahieu</span>
         </div>
       </div>
@@ -33,7 +39,13 @@ const About: FC = () => {
           CEO (Chief Energy Officer)
         </Typography>
         <div>
-          <Avatar src={lucy} variant="circular" className={styles.member} alt="A black pug named Lucy." />
+          <Avatar
+            src={lucy}
+            sx={{ width: '150px', height: '150px' }}
+            variant="circular"
+            className={styles.member}
+            alt="A black pug named Lucy."
+          />
           <span>Lucy</span>
         </div>
       </div>
@@ -42,7 +54,13 @@ const About: FC = () => {
           CFO (Chief Food Officer)
         </Typography>
         <div>
-          <Avatar src={lucky} variant="circular" className={styles.member} alt="A tan pug named Lucky." />
+          <Avatar
+            src={lucky}
+            sx={{ width: '150px', height: '150px' }}
+            variant="circular"
+            className={styles.member}
+            alt="A tan pug named Lucky."
+          />
           <span>Lucky</span>
         </div>
       </div>

@@ -3,16 +3,16 @@
  */
 import { FC } from 'react';
 import { useNavigate } from 'react-router-dom';
-import styles from '@views/Privacy.module.css';
 import Typography from '@mui/material/Typography';
 import Link from '@mui/material/Link';
+import Box from '@mui/material/Box';
 
 const Privacy: FC = () => {
   const navigate = useNavigate();
 
   return (
-    <div className={styles.root}>
-      <Typography variant="h2">Privacy Policy</Typography>
+    <Box sx={{ pl: 5, pr: 5 }}>
+      <Typography variant="h3">Privacy Policy</Typography>
       <Typography variant="h6">Last updated: December 16, 2022</Typography>
       <Typography variant="body2">
         This Privacy Policy describes Our policies and procedures on the collection, use and disclosure of Your
@@ -22,13 +22,13 @@ const Privacy: FC = () => {
         We use Your Personal data to provide and improve the Service. By using the Service, You agree to the collection
         and use of information in accordance with this Privacy Policy.
       </Typography>
-      <Typography variant="h2">Interpretation and Definitions</Typography>
-      <Typography variant="h3">Interpretation</Typography>
+      <Typography variant="h3">Interpretation and Definitions</Typography>
+      <Typography variant="h4">Interpretation</Typography>
       <Typography variant="body2">
         The words of which the initial letter is capitalized have meanings defined under the following conditions. The
         following definitions shall have the same meaning regardless of whether they appear in singular or in plural.
       </Typography>
-      <Typography variant="h3">Definitions</Typography>
+      <Typography variant="h4">Definitions</Typography>
       <Typography variant="body2">For the purposes of this Privacy Policy:</Typography>
       <ul>
         <li>
@@ -133,8 +133,8 @@ const Privacy: FC = () => {
           </Typography>
         </li>
       </ul>
-      <Typography variant="h2">Collecting and Using Your Personal Data</Typography>
-      <Typography variant="h3">Types of Data Collected</Typography>
+      <Typography variant="h3">Collecting and Using Your Personal Data</Typography>
+      <Typography variant="h4">Types of Data Collected</Typography>
       <Typography variant="h4">Personal Data</Typography>
       <Typography variant="body2">
         While using Our Service, We may ask You to provide Us with certain personally identifiable information that can
@@ -259,7 +259,7 @@ const Privacy: FC = () => {
         For more information about the cookies we use and your choices regarding cookies, please visit our Cookies
         Policy or the Cookies section of our Privacy Policy.
       </Typography>
-      <Typography variant="h3">Use of Your Personal Data</Typography>
+      <Typography variant="h4">Use of Your Personal Data</Typography>
       <Typography variant="body2">The Company may use Personal Data for the following purposes:</Typography>
       <ul>
         <li>
@@ -347,7 +347,7 @@ const Privacy: FC = () => {
           consent.
         </li>
       </ul>
-      <Typography variant="h3">Retention of Your Personal Data</Typography>
+      <Typography variant="h4">Retention of Your Personal Data</Typography>
       <Typography variant="body2">
         The Company will retain Your Personal Data only for as long as is necessary for the purposes set out in this
         Privacy Policy. We will retain and use Your Personal Data to the extent necessary to comply with our legal
@@ -359,7 +359,7 @@ const Privacy: FC = () => {
         shorter period of time, except when this data is used to strengthen the security or to improve the functionality
         of Our Service, or We are legally obligated to retain this data for longer time periods.
       </Typography>
-      <Typography variant="h3">Transfer of Your Personal Data</Typography>
+      <Typography variant="h4">Transfer of Your Personal Data</Typography>
       <Typography variant="body2">
         Your information, including Personal Data, is processed at the Company's operating offices and in any other
         places where the parties involved in the processing are located. It means that this information may be
@@ -376,7 +376,7 @@ const Privacy: FC = () => {
         a country unless there are adequate controls in place including the security of Your data and other personal
         information.
       </Typography>
-      <Typography variant="h3">Delete Your Personal Data</Typography>
+      <Typography variant="h4">Delete Your Personal Data</Typography>
       <Typography variant="body2">
         You have the right to delete or request that We assist in deleting the Personal Data that We have collected
         about You.
@@ -393,7 +393,7 @@ const Privacy: FC = () => {
         Please note, however, that We may need to retain certain information when we have a legal obligation or lawful
         basis to do so.
       </Typography>
-      <Typography variant="h3">Disclosure of Your Personal Data</Typography>
+      <Typography variant="h4">Disclosure of Your Personal Data</Typography>
       <Typography variant="h4">Business Transactions</Typography>
       <Typography variant="body2">
         If the Company is involved in a merger, acquisition or asset sale, Your Personal Data may be transferred. We
@@ -415,19 +415,19 @@ const Privacy: FC = () => {
         <li>Protect the personal safety of Users of the Service or the public</li>
         <li>Protect against legal liability</li>
       </ul>
-      <Typography variant="h3">Security of Your Personal Data</Typography>
+      <Typography variant="h4">Security of Your Personal Data</Typography>
       <Typography variant="body2">
         The security of Your Personal Data is important to Us, but remember that no method of transmission over the
         Internet, or method of electronic storage is 100% secure. While We strive to use commercially acceptable means
         to protect Your Personal Data, We cannot guarantee its absolute security.
       </Typography>
-      <Typography variant="h2">Detailed Information on the Processing of Your Personal Data</Typography>
+      <Typography variant="h3">Detailed Information on the Processing of Your Personal Data</Typography>
       <Typography variant="body2">
         The Service Providers We use may have access to Your Personal Data. These third-party vendors collect, store,
         use, process and transfer information about Your activity on Our Service in accordance with their Privacy
         Policies.
       </Typography>
-      <Typography variant="h3">Analytics</Typography>
+      <Typography variant="h4">Analytics</Typography>
       <Typography variant="body2">
         We may use third-party Service providers to monitor and analyze the use of our Service.
       </Typography>
@@ -456,12 +456,12 @@ const Privacy: FC = () => {
           </Typography>
         </li>
       </ul>
-      <Typography variant="h2">CCPA Privacy</Typography>
+      <Typography variant="h3">CCPA Privacy</Typography>
       <Typography variant="body2">
         This privacy notice section for California residents supplements the information contained in Our Privacy Policy
         and it applies solely to all visitors, users, and others who reside in the State of California.
       </Typography>
-      <Typography variant="h3">Categories of Personal Information Collected</Typography>
+      <Typography variant="h4">Categories of Personal Information Collected</Typography>
       <Typography variant="body2">
         We collect information that identifies, relates to, describes, references, is capable of being associated with,
         or could reasonably be linked, directly or indirectly, with a particular Consumer or Device. The following is a
@@ -610,7 +610,7 @@ const Privacy: FC = () => {
           </ul>
         </li>
       </ul>
-      <Typography variant="h3">Sources of Personal Information</Typography>
+      <Typography variant="h4">Sources of Personal Information</Typography>
       <Typography variant="body2">
         We obtain the categories of personal information listed above from the following categories of sources:
       </Typography>
@@ -631,7 +631,7 @@ const Privacy: FC = () => {
           our Service, or other third-party vendors that We use to provide the Service to You.
         </li>
       </ul>
-      <Typography variant="h3">Use of Personal Information for Business Purposes or Commercial Purposes</Typography>
+      <Typography variant="h4">Use of Personal Information for Business Purposes or Commercial Purposes</Typography>
       <Typography variant="body2">
         We may use or disclose personal information We collect for &quot;business purposes&quot; or &quot;commercial
         purposes&quot; (as defined under the CCPA), which may include the following examples:
@@ -665,7 +665,7 @@ const Privacy: FC = () => {
         If We decide to collect additional categories of personal information or use the personal information We
         collected for materially different, unrelated, or incompatible purposes We will update this Privacy Policy.
       </Typography>
-      <Typography variant="h3">
+      <Typography variant="h4">
         Disclosure of Personal Information for Business Purposes or Commercial Purposes
       </Typography>
       <Typography variant="body2">
@@ -696,7 +696,7 @@ const Privacy: FC = () => {
         describes the purpose and requires the recipient to both keep that personal information confidential and not use
         it for any purpose except performing the contract.
       </Typography>
-      <Typography variant="h3">Sale of Personal Information</Typography>
+      <Typography variant="h4">Sale of Personal Information</Typography>
       <Typography variant="body2">
         As defined in the CCPA, &quot;sell&quot; and &quot;sale&quot; mean selling, renting, releasing, disclosing,
         disseminating, making available, transferring, or otherwise communicating orally, in writing, or by electronic
@@ -727,7 +727,7 @@ const Privacy: FC = () => {
           <Typography variant="body2">Category F: Internet or other similar network activity</Typography>
         </li>
       </ul>
-      <Typography variant="h3">Share of Personal Information</Typography>
+      <Typography variant="h4">Share of Personal Information</Typography>
       <Typography variant="body2">
         We may share Your personal information identified in the above categories with the following categories of third
         parties:
@@ -749,7 +749,7 @@ const Privacy: FC = () => {
           </Typography>
         </li>
       </ul>
-      <Typography variant="h3">Sale of Personal Information of Minors Under 16 Years of Age</Typography>
+      <Typography variant="h4">Sale of Personal Information of Minors Under 16 Years of Age</Typography>
       <Typography variant="body2">
         We do not knowingly collect personal information from minors under the age of 16 through our Service, although
         certain third party websites that we link to may do so. These third-party websites have their own terms of use
@@ -767,7 +767,7 @@ const Privacy: FC = () => {
         If You have reason to believe that a child under the age of 13 (or 16) has provided Us with personal
         information, please contact Us with sufficient detail to enable Us to delete that information.
       </Typography>
-      <Typography variant="h3">Your Rights under the CCPA</Typography>
+      <Typography variant="h4">Your Rights under the CCPA</Typography>
       <Typography variant="body2">
         The CCPA provides California residents with specific rights regarding their personal information. If You are a
         resident of California, You have the following rights:
@@ -857,7 +857,7 @@ const Privacy: FC = () => {
           </ul>
         </li>
       </ul>
-      <Typography variant="h3">Exercising Your CCPA Data Protection Rights</Typography>
+      <Typography variant="h4">Exercising Your CCPA Data Protection Rights</Typography>
       <Typography variant="body2">
         In order to exercise any of Your rights under the CCPA, and if You are a California resident, You can contact
         Us:
@@ -909,7 +909,7 @@ const Privacy: FC = () => {
         For data portability requests, We will select a format to provide Your personal information that is readily
         usable and should allow You to transmit the information from one entity to another entity without hindrance.
       </Typography>
-      <Typography variant="h3">Do Not Sell My Personal Information</Typography>
+      <Typography variant="h4">Do Not Sell My Personal Information</Typography>
       <Typography variant="body2">
         You have the right to opt-out of the sale of Your personal information. Once We receive and confirm a verifiable
         consumer request from You, we will stop selling Your personal information. To exercise Your right to opt-out,
@@ -969,7 +969,7 @@ const Privacy: FC = () => {
         You can also stop the collection of location information from Your mobile device by changing the preferences on
         Your mobile device.
       </Typography>
-      <Typography variant="h2">
+      <Typography variant="h3">
         &quot;Do Not Track&quot; Policy as Required by California Online Privacy Protection Act (CalOPPA)
       </Typography>
       <Typography variant="body2">Our Service does not respond to Do Not Track signals.</Typography>
@@ -978,7 +978,7 @@ const Privacy: FC = () => {
         You can set Your preferences in Your web browser to inform websites that You do not want to be tracked. You can
         enable or disable DNT by visiting the preferences or settings page of Your web browser.
       </Typography>
-      <Typography variant="h2">Children's Privacy</Typography>
+      <Typography variant="h3">Children's Privacy</Typography>
       <Typography variant="body2">
         Our Service does not address anyone under the age of 13. We do not knowingly collect personally identifiable
         information from anyone under the age of 13. If You are a parent or guardian and You are aware that Your child
@@ -990,7 +990,7 @@ const Privacy: FC = () => {
         If We need to rely on consent as a legal basis for processing Your information and Your country requires consent
         from a parent, We may require Your parent's consent before We collect and use that information.
       </Typography>
-      <Typography variant="h2">Your California Privacy Rights (California's Shine the Light law)</Typography>
+      <Typography variant="h3">Your California Privacy Rights (California's Shine the Light law)</Typography>
       <Typography variant="body2">
         Under California Civil Code Section 1798 (California's Shine the Light law), California residents with an
         established business relationship with us can request information once a year about sharing their Personal Data
@@ -1000,7 +1000,7 @@ const Privacy: FC = () => {
         If you'd like to request more information under the California Shine the Light law, and if You are a California
         resident, You can contact Us using the contact information provided below.
       </Typography>
-      <Typography variant="h2">
+      <Typography variant="h3">
         California Privacy Rights for Minor Users (California Business and Professions Code Section 22581)
       </Typography>
       <Typography variant="body2">
@@ -1016,7 +1016,7 @@ const Privacy: FC = () => {
         Be aware that Your request does not guarantee complete or comprehensive removal of content or information posted
         online and that the law may not permit or require removal in certain circumstances.
       </Typography>
-      <Typography variant="h2">Links to Other Websites</Typography>
+      <Typography variant="h3">Links to Other Websites</Typography>
       <Typography variant="body2">
         Our Service may contain links to other websites that are not operated by Us. If You click on a third party link,
         You will be directed to that third party's site. We strongly advise You to review the Privacy Policy of every
@@ -1026,7 +1026,7 @@ const Privacy: FC = () => {
         We have no control over and assume no responsibility for the content, privacy policies or practices of any third
         party sites or services.
       </Typography>
-      <Typography variant="h2">Changes to this Privacy Policy</Typography>
+      <Typography variant="h3">Changes to this Privacy Policy</Typography>
       <Typography variant="body2">
         We may update Our Privacy Policy from time to time. We will notify You of any changes by posting the new Privacy
         Policy on this page.
@@ -1039,7 +1039,7 @@ const Privacy: FC = () => {
         You are advised to review this Privacy Policy periodically for any changes. Changes to this Privacy Policy are
         effective when they are posted on this page.
       </Typography>
-      <Typography variant="h2">Contact Us</Typography>
+      <Typography variant="h3">Contact Us</Typography>
       <Typography variant="body2">If you have any questions about this Privacy Policy, You can contact us:</Typography>
       <ul>
         <li>
@@ -1054,7 +1054,7 @@ const Privacy: FC = () => {
           </Typography>
         </li>
       </ul>
-    </div>
+    </Box>
   );
 };
 

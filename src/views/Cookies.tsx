@@ -3,16 +3,16 @@
  */
 import { FC } from 'react';
 import { useNavigate } from 'react-router-dom';
-import styles from '@views/Cookies.module.css';
 import Typography from '@mui/material/Typography';
 import Link from '@mui/material/Link';
+import Box from '@mui/material/Box';
 
 const Cookies: FC = () => {
   const navigate = useNavigate();
 
   return (
-    <div className={styles.root}>
-      <Typography variant="h2">Cookies Policy</Typography>
+    <Box sx={{ pl: 5, pr: 5 }}>
+      <Typography variant="h3">Cookies Policy</Typography>
       <Typography variant="body2">Last updated: December 16, 2022</Typography>
       <Typography variant="body2">
         This Cookies Policy explains what Cookies are and how We use them. You should read this policy so You can
@@ -32,13 +32,13 @@ const Cookies: FC = () => {
         We do not store sensitive personal information, such as mailing addresses, account passwords, etc. in the
         Cookies We use.
       </Typography>
-      <Typography variant="h2">Interpretation and Definitions</Typography>
-      <Typography variant="h3">Interpretation</Typography>
+      <Typography variant="h3">Interpretation and Definitions</Typography>
+      <Typography variant="h4">Interpretation</Typography>
       <Typography variant="body2">
         The words of which the initial letter is capitalized have meanings defined under the following conditions. The
         following definitions shall have the same meaning regardless of whether they appear in singular or in plural.
       </Typography>
-      <Typography variant="h3">Definitions</Typography>
+      <Typography variant="h4">Definitions</Typography>
       <Typography variant="body2">For the purposes of this Cookies Policy:</Typography>
       <ul>
         <li>
@@ -58,8 +58,8 @@ const Cookies: FC = () => {
           behalf of which such individual is accessing or using the Website, as applicable.
         </li>
       </ul>
-      <Typography variant="h2">The use of the Cookies</Typography>
-      <Typography variant="h3">Type of Cookies We Use</Typography>
+      <Typography variant="h3">The use of the Cookies</Typography>
+      <Typography variant="h4">Type of Cookies We Use</Typography>
       <Typography variant="body2">
         Cookies can be &quot;Persistent&quot; or &quot;Session&quot; Cookies. Persistent Cookies remain on your personal
         computer or mobile device when You go offline, while Session Cookies are deleted as soon as You close your web
@@ -95,7 +95,7 @@ const Cookies: FC = () => {
           </Typography>
         </li>
       </ul>
-      <Typography variant="h3">Your Choices Regarding Cookies</Typography>
+      <Typography variant="h4">Your Choices Regarding Cookies</Typography>
       <Typography variant="body2">
         If You prefer to avoid the use of Cookies on the Website, first You must disable the use of Cookies in your
         browser and then delete the Cookies saved in your browser associated with this website. You may use this option
@@ -158,7 +158,7 @@ const Cookies: FC = () => {
       <Typography variant="body2">
         For any other web browser, please visit your web browser's official web pages.
       </Typography>
-      <Typography variant="h3">More Information about Cookies</Typography>
+      <Typography variant="h4">More Information about Cookies</Typography>
       <Typography variant="body2">
         You can learn more about cookies here:{' '}
         <Link href="https://www.termsfeed.com/blog/cookies/" target="_blank">
@@ -166,7 +166,7 @@ const Cookies: FC = () => {
         </Link>
         .
       </Typography>
-      <Typography variant="h3">Contact Us</Typography>
+      <Typography variant="h4">Contact Us</Typography>
       <Typography variant="body2">If you have any questions about this Cookies Policy, You can contact us:</Typography>
       <ul>
         <li>
@@ -181,7 +181,7 @@ const Cookies: FC = () => {
           </Typography>
         </li>
       </ul>
-    </div>
+    </Box>
   );
 };
 

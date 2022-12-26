@@ -9,12 +9,13 @@ import Container from '@mui/material/Container';
 const Home: FC = () => {
   return (
     <Container maxWidth="xs" className={styles.root}>
-      <Typography variant="h4" gutterBottom>
+      <Typography variant="h3" gutterBottom>
         Welcome
       </Typography>
-      <Typography variant="body2" gutterBottom>
-        Pugs, LLC is a multi-faceted umbrella of web applications and software. It was founded in 2020 right in the
-        heart of Las Vegas, NV. We aim to bring cost-effective, scalable cloud architecture solutions to companies in
+      <Typography variant="body1" gutterBottom>
+        Pugs, LLC is a multifaceted software and web application development firm. It was founded in 2020 by Wesley
+        LeMahieu right in the heart of Las Vegas, NV. We have a wide array of expertise relating to software and web
+        applications and bring cost-effective, scalable cloud architecture solutions to individuals or companies in
         need.
       </Typography>
     </Container>

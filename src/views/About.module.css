@@ -4,8 +4,6 @@
 }
 
 .member {
-  height: 15vmin !important;
-  width: 15vmin !important;
   pointer-events: none;
   margin: 0 auto;
 }

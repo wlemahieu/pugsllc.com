@@ -64,7 +64,7 @@ const Contact: FC = () => {
 
   return (
     <Container maxWidth="xs" className={styles.root}>
-      <Typography variant="h4" gutterBottom>
+      <Typography variant="h3" gutterBottom>
         Contact
       </Typography>
       <div className={styles.form}>
