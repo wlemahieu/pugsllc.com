@@ -54,7 +54,7 @@ const domains = [
   {
     url: 'purple.poker',
     markets: ['Poker', 'Entertainment'],
-    price: '$150,000',
+    price: '$75,000',
   },
 ];
 
