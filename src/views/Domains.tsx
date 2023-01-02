@@ -14,7 +14,7 @@ const domains = [
   {
     url: 'marijuanalocators.com',
     markets: ['Cannabis', 'Entertainment'],
-    price: '$250,000',
+    price: '$175,000',
   },
   {
     url: 'medicalmarijuanalocators.com',
@@ -68,8 +68,8 @@ const Domains = () => {
           Domains
         </Typography>
         <Typography variant="body1" sx={{ mb: 3 }}>
-          <b>T</b>
-          <span>he digital real estate we've collected over the years is extensive.</span>
+          <b>W</b>
+          <span>e have several premium domain names for sale.</span>
         </Typography>
         <TableContainer component={Paper}>
           <Table sx={{ overflow: 'hidden' }} aria-label="simple table" size="small">
