@@ -10,6 +10,7 @@ import Privacy from '@src/views/Privacy';
 import Cookies from '@src/views/Cookies';
 import Contact from '@views/Contact';
 import Portfolio from '@views/Portfolio';
+import Domains from '@src/views/Domains';
 
 const Routes: FC = () => {
   return (
@@ -21,6 +22,7 @@ const Routes: FC = () => {
       <Route path="/cookies" element={<Cookies />} />
       <Route path="/contact" element={<Contact />} />
       <Route path="/portfolio" element={<Portfolio />} />
+      <Route path="/domains" element={<Domains />} />
     </RouteSwitch>
   );
 };

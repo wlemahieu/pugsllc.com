@@ -9,7 +9,7 @@ import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
 
 const defaultTab = 'welcome';
-const tabs = ['welcome', 'about', 'portfolio', 'contact'];
+const tabs = ['welcome', 'about', 'portfolio', 'domains', 'contact'];
 
 const findTabIdx = (tab: string) => tabs.findIndex((t) => t === tab);
 
