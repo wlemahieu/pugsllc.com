@@ -24,11 +24,6 @@ const domains = [
   {
     url: 'marijuana.gs',
     markets: ['Cannabis', 'Entertainment'],
-    price: '$50,000',
-  },
-  {
-    url: 'marijuana.gs',
-    markets: ['Cannabis', 'Entertainment'],
     price: '$75,000',
   },
   {
