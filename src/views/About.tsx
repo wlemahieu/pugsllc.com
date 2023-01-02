@@ -20,8 +20,9 @@ const About: FC = () => {
         <Typography variant="h3" gutterBottom>
           About
         </Typography>
-        <Typography variant="body1" gutterBottom sx={{ mb: 4 }}>
-          Our team is energetic, efficient &amp; small yet powerful!
+        <Typography variant="body1" sx={{ mb: 3 }}>
+          <b>O</b>
+          <span>ur team is energetic, efficient &amp; small yet powerful!</span>
         </Typography>
         <Box sx={{ mb: 4 }}>
           <Typography variant="h6" gutterBottom>

@@ -6,6 +6,9 @@ import TableContainer from '@mui/material/TableContainer';
 import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
+import Typography from '@mui/material/Typography';
+import Button from '@mui/material/Button';
+import { useNavigate } from 'react-router';
 
 const domains = [
   {
@@ -61,36 +64,50 @@ const domains = [
 ];
 
 const Domains = () => {
+  const navigate = useNavigate();
+
   return (
     <Container maxWidth="md">
-      <TableContainer component={Paper}>
-        <Table sx={{ overflow: 'hidden' }} aria-label="simple table" size="small">
-          <TableHead>
-            <TableRow>
-              <TableCell sx={{ fontWeight: 'bold' }}>Domain URL</TableCell>
-              <TableCell sx={{ fontWeight: 'bold' }}>Markets</TableCell>
-              <TableCell sx={{ fontWeight: 'bold' }}>Asking Price</TableCell>
-            </TableRow>
-          </TableHead>
-          <TableBody>
-            {domains.map((row, key) => {
-              return (
-                <TableRow key={`key-${key}`} sx={{ '&:last-child td, &:last-child th': { border: 0 } }}>
-                  <TableCell component="th" scope="row">
-                    {row.url}
-                  </TableCell>
-                  <TableCell component="th" scope="row">
-                    {row.markets.join(', ')}
-                  </TableCell>
-                  <TableCell component="th" scope="row">
-                    {row.price}
-                  </TableCell>
-                </TableRow>
-              );
-            })}
-          </TableBody>
-        </Table>
-      </TableContainer>
+      <Paper sx={{ p: 8, textAlign: 'center' }}>
+        <Typography variant="h3" gutterBottom>
+          Domains
+        </Typography>
+        <Typography variant="body1" sx={{ mb: 3 }}>
+          <b>T</b>
+          <span>he digital real estate we've collected over the years is extensive.</span>
+        </Typography>
+        <TableContainer component={Paper}>
+          <Table sx={{ overflow: 'hidden' }} aria-label="simple table" size="small">
+            <TableHead>
+              <TableRow>
+                <TableCell sx={{ fontWeight: 'bold' }}>Domain URL</TableCell>
+                <TableCell sx={{ fontWeight: 'bold' }}>Markets</TableCell>
+                <TableCell sx={{ fontWeight: 'bold' }}>Asking Price</TableCell>
+              </TableRow>
+            </TableHead>
+            <TableBody>
+              {domains.map((row, key) => {
+                return (
+                  <TableRow key={`key-${key}`} sx={{ '&:last-child td, &:last-child th': { border: 0 } }}>
+                    <TableCell component="th" scope="row">
+                      {row.url}
+                    </TableCell>
+                    <TableCell component="th" scope="row">
+                      {row.markets.join(', ')}
+                    </TableCell>
+                    <TableCell component="th" scope="row">
+                      {row.price}
+                    </TableCell>
+                  </TableRow>
+                );
+              })}
+            </TableBody>
+          </Table>
+        </TableContainer>
+        <Button variant="contained" color="success" sx={{ mt: 2 }} onClick={() => navigate('/contact')}>
+          Contact us to discuss options
+        </Button>
+      </Paper>
     </Container>
   );
 };

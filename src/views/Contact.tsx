@@ -70,8 +70,9 @@ const Contact: FC = () => {
           Contact
         </Typography>
         <Box>
-          <Typography variant="body2" gutterBottom>
-            Serious inquiries only please:
+          <Typography variant="body1" sx={{ mb: 3 }}>
+            <b>S</b>
+            <span>erious inquiries only please:</span>
           </Typography>
           <form onSubmit={formik.handleSubmit}>
             <TextField

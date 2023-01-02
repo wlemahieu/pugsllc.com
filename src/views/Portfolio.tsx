@@ -51,7 +51,7 @@ const Portfolio: FC = () => {
         <Typography variant="h3" gutterBottom>
           Portfolio
         </Typography>
-        <Typography variant="body1" sx={{ m: 3 }}>
+        <Typography variant="body1" sx={{ mb: 3 }}>
           <b>W</b>
           <span>
             e've built up a portfolio of interesting web applications and software currently in use. Check them out

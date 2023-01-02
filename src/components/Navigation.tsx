@@ -7,11 +7,12 @@ import Box from '@mui/material/Box';
 import Divider from '@mui/material/Divider';
 import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
+import kebabCase from 'lodash/kebabCase';
 
 const defaultTab = 'welcome';
 const tabs = ['welcome', 'about', 'portfolio', 'domains', 'contact'];
 
-const findTabIdx = (tab: string) => tabs.findIndex((t) => t === tab);
+const findTabIdx = (tab: string) => tabs.findIndex((t) => kebabCase(t) === tab);
 
 const Navigation: FC = () => {
   const navigate = useNavigate();
@@ -32,7 +33,7 @@ const Navigation: FC = () => {
   const handleChange = (event: React.SyntheticEvent) => {
     const target = event.target as HTMLElement;
     const { id } = target;
-    const url = id === defaultTab ? '/' : `/${id}`;
+    const url = id === defaultTab ? '/' : `/${kebabCase(id)}`;
     const idx = findTabIdx(id);
     setKey(idx);
     navigate(url);
@@ -40,8 +41,26 @@ const Navigation: FC = () => {
 
   return (
     <nav>
-      <Box sx={{ textAlign: 'center', m: 3, height: '100%' }}>
-        <Tabs value={key} onChange={handleChange} centered sx={{ height: '100%' }}>
+      <Box
+        sx={{
+          textAlign: 'center',
+          mt: 3,
+          mb: 3,
+          height: '100%',
+          display: 'flex',
+          justifyContent: 'center',
+          width: '100%',
+        }}
+      >
+        <Tabs
+          value={key}
+          onChange={handleChange}
+          centered
+          sx={{ height: '100%' }}
+          variant="scrollable"
+          scrollButtons={true}
+          allowScrollButtonsMobile
+        >
           {tabs.map((tab, idx) => (
             <Tab key={`key-${idx}`} label={tab} id={tab} value={idx} />
           ))}
