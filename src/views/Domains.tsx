@@ -9,6 +9,7 @@ import Paper from '@mui/material/Paper';
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 import { useNavigate } from 'react-router';
+import { Link } from '@mui/material';
 
 const domains = [
   {
@@ -85,7 +86,9 @@ const Domains = () => {
                 return (
                   <TableRow key={`key-${key}`} sx={{ '&:last-child td, &:last-child th': { border: 0 } }}>
                     <TableCell component="th" scope="row">
-                      {row.url}
+                      <Link href={row.url} target="_blank" rel="external nofollow noopener">
+                        {row.url}
+                      </Link>
                     </TableCell>
                     <TableCell component="th" scope="row">
                       {row.markets.join(', ')}
