@@ -19,14 +19,6 @@ import wes from '@assets/wes.jpg';
 
 const projects = [
   {
-    title: 'axsripoff.com',
-    url: 'https://axsripoff.com',
-    github: 'https://github.com/wlemahieu/axsripoff.com',
-    description:
-      'A website where people can share their frustrating experiences with AXS.com without being ignored or blocked.',
-    image: axsripoff,
-  },
-  {
     title: 'Coin Sponge',
     url: 'https://coinsponge.com',
     github: 'https://github.com/wlemahieu/coinsponge.com',
@@ -41,6 +33,14 @@ const projects = [
     description:
       'A personal website for Wesley LeMahieu where he does fun things like play with Nano, ThreeJS, React-Three-Fiber and more!',
     image: wes,
+  },
+  {
+    title: 'axsripoff.com',
+    url: 'https://axsripoff.com',
+    github: 'https://github.com/wlemahieu/axsripoff.com',
+    description:
+      'A website where people can share their frustrating experiences with AXS.com without being ignored or blocked.',
+    image: axsripoff,
   },
 ];
 
