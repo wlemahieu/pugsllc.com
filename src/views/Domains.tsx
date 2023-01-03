@@ -86,7 +86,7 @@ const Domains = () => {
                 return (
                   <TableRow key={`key-${key}`} sx={{ '&:last-child td, &:last-child th': { border: 0 } }}>
                     <TableCell component="th" scope="row">
-                      <Link href={row.url} target="_blank" rel="external nofollow noopener">
+                      <Link href={`https://${row.url}`} target="_blank" rel="external nofollow noopener">
                         {row.url}
                       </Link>
                     </TableCell>
