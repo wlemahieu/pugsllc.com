@@ -19,6 +19,7 @@ const firebaseConfig = {
   storageBucket: 'pugsllc.appspot.com',
   messagingSenderId: '429542448208',
   appId: '1:429542448208:web:619875908166957d6f0555',
+  measurementId: 'G-M70BEJLPH8',
 };
 
 const app = initializeApp(firebaseConfig);
