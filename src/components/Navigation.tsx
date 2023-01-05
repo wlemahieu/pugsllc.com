@@ -55,7 +55,6 @@ const Navigation: FC = () => {
         <Tabs
           value={key}
           onChange={handleChange}
-          centered
           sx={{ height: '100%' }}
           variant="scrollable"
           scrollButtons={true}
