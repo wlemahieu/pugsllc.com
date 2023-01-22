@@ -78,7 +78,6 @@ const Domains = () => {
               <TableRow>
                 <TableCell sx={{ fontWeight: 'bold' }}>Domain URL</TableCell>
                 <TableCell sx={{ fontWeight: 'bold' }}>Markets</TableCell>
-                <TableCell sx={{ fontWeight: 'bold' }}>Asking Price</TableCell>
               </TableRow>
             </TableHead>
             <TableBody>
@@ -92,9 +91,6 @@ const Domains = () => {
                     </TableCell>
                     <TableCell component="th" scope="row">
                       {row.markets.join(', ')}
-                    </TableCell>
-                    <TableCell component="th" scope="row">
-                      {row.price}
                     </TableCell>
                   </TableRow>
                 );
